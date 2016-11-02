@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_kaina"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="3dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="3dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="lt.petabitas.kainoskalkuliatorius.Kaina"
+    tools:showIn="@layout/activity_kain">
+
+    <TextView
+        android:id="@+id/lblMarza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marža %"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/etextMarza"
+        android:layout_alignStart="@+id/etextMarza" />
+
+    <TextView
+        android:text="Pard. kaina be PVM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPardBePVM"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/etextKainaBePVM"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/etextPardBePVM"
+        android:layout_alignStart="@+id/etextPardBePVM" />
+
+    <TextView
+        android:text="Pard. kaina su PVM"
+        android:layout_marginTop="-5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPardSuPVM"
+        android:paddingTop="3dp"
+        android:layout_below="@+id/etextPVM"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/etextPardBePVM"
+        android:layout_alignStart="@+id/etextPardBePVM" />
+
+    <TextView
+        android:id="@+id/lblKainaBePVM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kaina be PVM" />
+
+    <TextView
+        android:text="Kaina su PVM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5sp"
+        android:id="@+id/lblKainaSuPVM"
+        android:paddingTop="3dp"
+        android:layout_below="@+id/etextPVM"
+        android:layout_alignRight="@+id/etextKainaSuPVM"
+        android:layout_alignEnd="@+id/etextKainaSuPVM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="150dp"
+
+        android:ems="10"
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="6sp"
+        android:id="@+id/etextPardBePVM"
+        android:focusable="false"
+        android:layout_alignBaseline="@+id/etextPVM"
+        android:layout_alignBottom="@+id/etextPVM"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"   />
+
+    <EditText
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etextKainaBePVM"
+        android:background="@drawable/customborder"
+        android:layout_width="150dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/lblMarza"
+        android:layout_alignRight="@+id/etextPVM"
+        android:layout_alignEnd="@+id/etextPVM" />
+
+    <TextView
+        android:text="PVM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPVM"
+        android:layout_alignBaseline="@+id/lblPardBePVM"
+        android:layout_alignBottom="@+id/lblPardBePVM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etextPVM"
+        android:layout_alignEnd="@+id/etextPVM" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="6sp"
+
+        android:ems="10"
+        android:id="@+id/etextPVM"
+        android:focusable="false"
+        android:layout_below="@+id/lblPardBePVM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etextPardSuPVM"
+        android:background="@drawable/customborder"
+        android:layout_alignBaseline="@+id/etextKainaSuPVM"
+        android:layout_alignBottom="@+id/etextKainaSuPVM"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:ems="10"
+        android:id="@+id/etextName"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/etextKainaSuPVM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/customborder"
+        android:inputType="textMultiLine" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnCreate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/pressed_color"
+        android:background="@drawable/bg_key"
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="true" />
+
+    <Button
+        android:text="Įrašyti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCreate"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@android:style/Widget.Button.Inset" />
+
+    <EditText
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:ems="10"
+        android:id="@+id/etextMarza"
+        android:background="@drawable/customborder"
+        android:layout_width="150dp"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:layout_below="@+id/lblMarza"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="30sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etextKainaSuPVM"
+        android:background="@drawable/customborder"
+        android:layout_below="@+id/lblKainaSuPVM"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Ištrinti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDelete"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Pakeisti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEdit"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_below="@+id/spinner"
+        android:layout_toLeftOf="@+id/btnDelete"
+        android:layout_toStartOf="@+id/btnDelete" />
+
+
+
+    <TextView
+        android:text="Pavadinimas, rūšis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etextName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/lblPav" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginTop="5sp"
+        android:textSize = "20sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:entries="@array/grupes"
+        android:background="@drawable/customborder"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/etextName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/btnEdit"
+        android:layout_alignStart="@+id/btnEdit" />
+
+</RelativeLayout>

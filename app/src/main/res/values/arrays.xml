@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+<string-array name="grupes">
+    <item></item>
+<item>CPU</item>
+<item>MB</item>
+<item>RAM</item>
+<item>VGA</item>
+<item>DVD</item>
+<item>PSU</item>
+<item>Case</item>
+<item>Keyboard</item>
+<item>Mouse</item>
+<item>Other</item>
+</string-array>
+</resources>
