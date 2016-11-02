@@ -1,7 +1,7 @@
 package lt.petabitas.kainoskalkuliatorius;
 
 
-public class FavoriteList {
+public class FavoriteListItem {
 
     //private variables
     int id;
@@ -11,7 +11,7 @@ public class FavoriteList {
     String kaina;
 
     // constructor
-    public FavoriteList(int id, String pavadinimas, String rusis, String bePVM, String kaina) {
+    public FavoriteListItem(int id, String pavadinimas, String rusis, String bePVM, String kaina) {
         this.id = id;
         this.pavadinimas = pavadinimas;
         this.rusis = rusis;
@@ -19,7 +19,7 @@ public class FavoriteList {
         this.kaina = kaina;    }
 
 
-    public FavoriteList() {
+    public FavoriteListItem() {
 
     }
 

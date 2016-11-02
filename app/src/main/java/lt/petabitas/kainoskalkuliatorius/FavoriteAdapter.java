@@ -1,23 +1,26 @@
 package lt.petabitas.kainoskalkuliatorius;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import lt.petabitas.kainoskalkuliatorius.R;
 
 import java.util.List;
 
 public class FavoriteAdapter extends BaseAdapter {
 
-    private List<FavoriteList> favorites;
+    private List<FavoriteListItem> favorites;
     private Context context;
-    private Kaina kaina;
 
-    public FavoriteAdapter(List<FavoriteList> favorites, Context context) {
+    public FavoriteAdapter(List<FavoriteListItem> favorites, Context context) {
         this.favorites = favorites;
         this.context = context;
+    }
+
+    public void setFavorites(List<FavoriteListItem> favorites) {
+        this.favorites = favorites;
     }
 
     @Override
@@ -39,7 +42,7 @@ public class FavoriteAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View view = View.inflate(context, R.layout.favorite_item, null);
-        FavoriteList item = (FavoriteList) getItem(position);
+        FavoriteListItem item = (FavoriteListItem) getItem(position);
         TextView textView = (TextView) view.findViewById(R.id.favorite_text);
         textView.setText(item.getPavadinimas() + " | " + item.getRusis() + " | " + item.getBePVM() + " | " + item.getKaina());
         return view;
