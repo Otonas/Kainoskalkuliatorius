@@ -65,6 +65,7 @@ public class Kaina extends AppCompatActivity {
         prepareButtonCreate();
         prepareButtonEdit();
         prepareButtonDelete();
+        prepareButtonClear();
         prepareListView();
     }
 
@@ -158,7 +159,7 @@ public class Kaina extends AppCompatActivity {
     }
 
     private void prepareButtonEdit() {
-        Button btnEdit = (Button) findViewById(R.id.btnEdit);
+        Button btnEdit = (Button) findViewById(R.id.btnClear);
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -192,7 +193,7 @@ public class Kaina extends AppCompatActivity {
     }
 
     private void prepareButtonCreate() {
-        Button btnCreate = (Button) findViewById(R.id.btnCreate);
+        Button btnCreate = (Button) findViewById(R.id.btnClear);
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -218,8 +219,32 @@ public class Kaina extends AppCompatActivity {
                 String kainai4 = String.valueOf(kaina4.doubleValue());
                 dbHelper.adddata(pavadinimas4, rusis4, ts4, kainai4);
 
+
                 Toast.makeText(Kaina.this, "Įrašas sukurtas", Toast.LENGTH_SHORT).show();
                 updateAdapter();
+            }
+
+        });
+    }
+
+    private void prepareButtonClear() {
+        Button btnCreate = (Button) findViewById(R.id.btnClear);
+        btnCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
+                save = -1;
+                etextMarza.setText("");
+                etextPardBePVM.setText("");
+                etextPardSuPVM.setText("");
+                etextKainaBePVM.setText("");
+                etextPVM.setText("");
+                etextKainaSuPVM.setText("");
+                etextName.setText("");
+                spinner.setSelection(0);
             }
 
         });
